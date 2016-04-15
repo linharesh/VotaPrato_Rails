@@ -32,7 +32,7 @@
 <br>
 
 <b> Preço Medio:
-  <%= @restaurante.qualificacoes.average(:valor_gasto) %> </b>
+  <%= valor_formatado(@restaurante.qualificacoes.average(:valor_gasto)) %> </b>
 
 
 <br>
@@ -54,15 +54,7 @@
 
 <br><br>
 
-<%= form_for comentario.new do |f| %>
-  <%= f.hidden_field :comentavel_id, value> @restaurante.id %>
-  <%= f.hidden_field :comentavel_type, value: @restaurante.class %>
-
-  <%= f.label :conteudo %> <br>
-  <%= f.text_area :conteudo %>
-
-  <%= f.submit %>
-<% end %>
+<%= novo_comentario @restaurante %>
 
 </body>
 
