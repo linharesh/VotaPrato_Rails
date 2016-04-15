@@ -8,17 +8,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body style = "background-color:#ccffcc">
-  <ul>
-	<% %w[clientes qualificacoes restaurantes].each do |controller_name| %>
-	  <li>
-	   <%= link_to controller_name, controller: controller_name %>
-	  </li>
-	<% end %>
-  </ul>
+  
+  <%= menu_principal %w(restaurantes clientes qualificacoes) %>
 
-</ul>
-
-
+<br>
 
 <%= yield %>
 
