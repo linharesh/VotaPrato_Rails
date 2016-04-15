@@ -1,0 +1,69 @@
+<html>
+<body>
+
+<h1>Exibindo Restaurante</h1>
+
+<p>
+   <b>Nome: </b>
+   <%= @restaurante.nome %>
+</p>
+
+<p>
+   <b>Endereço: </b>
+   <%= @restaurante.endereco %>
+</p>
+
+<p>
+   <b>Especialidade: </b>
+   <%= @restaurante.especialidade %>
+</p>
+
+<br>
+
+<br>
+<b> Nota Media:
+  <%= @restaurante.qualificacoes.average(:nota)%> </b>
+
+<br>
+
+<b> Numero de Qualificacoes:
+  <%= @restaurante.qualificacoes.count %> </b>
+
+<br>
+
+<b> Preço Medio:
+  <%= @restaurante.qualificacoes.average(:valor_gasto) %> </b>
+
+
+<br>
+
+
+<br>
+
+<%= link_to 'Editar', action: 'edit' %>
+
+<br><br>
+
+<%= link_to 'Voltar', action: 'index' %>
+
+<br><br>
+
+<%= link_to "Qualificar este restaurante", controller: "qualificacoes",
+										  action: "new",
+										  restaurante: @restaurante %>
+
+<br><br>
+
+<%= form_for comentario.new do |f| %>
+  <%= f.hidden_field :comentavel_id, value> @restaurante.id %>
+  <%= f.hidden_field :comentavel_type, value: @restaurante.class %>
+
+  <%= f.label :conteudo %> <br>
+  <%= f.text_area :conteudo %>
+
+  <%= f.submit %>
+<% end %>
+
+</body>
+
+</html>
