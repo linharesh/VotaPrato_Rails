@@ -1,0 +1,58 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @linharesh
+ Watch 0
+  Star 0
+  Fork 0 xfalcox/vota_prato
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathvota_prato/public/stylesheets/comentarios.css
+0a4ab4a  on 2 May 2013
+@xfalcox xfalcox Fim da penultima aula
+1 contributor
+RawBlameHistory    41 lines (34 sloc)  626 Bytes
+#comentarios {
+  display: inline-block;
+  /*border: solid black 1px;
+  border-radius: 5px;*/
+}
+
+#comentarios p {
+  text-indent: 10px;
+  margin-left: 10px;
+}
+
+form {
+  margin-left: 20px;
+}
+
+form label {
+  display: none;
+}
+
+textarea {
+  width: 200px;
+  height: 75px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+form input[type="submit"]{
+  display: block;
+  margin-top: -5px;
+  width: 206px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #ccd;
+  border: solid black 1px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #aad;
+}
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
