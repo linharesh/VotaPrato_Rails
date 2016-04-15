@@ -12,4 +12,9 @@ module ApplicationHelper
   		   locals: {comentavel: comentavel}
   end
 
+  def comentarios(comentavel)
+    render partial: "comentarios/comentarios",
+      locals: {comentarios: comentavel.comentarios}
+  end
+
 end
